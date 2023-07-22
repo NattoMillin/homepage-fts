@@ -11,13 +11,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  team,
+  analytics,
 }: {
   children: React.ReactNode;
+  team: React.ReactNode;
+  analytics: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body className="flex flex-col justify-center items-center h-screen">
-        {children}
+        <div>{children}</div>
+        <div>{team}</div>
+        <div>{analytics}</div>
       </body>
     </html>
   );
